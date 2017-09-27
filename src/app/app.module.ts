@@ -5,6 +5,8 @@ import {MaterialImportModule} from './modules/material-import/material-import.mo
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
+import {BodyComponent} from './components/body/body.component';
+import {MainContainerComponent} from './components/main-container/main-container.component';
 
 @NgModule({
     imports: [
@@ -13,7 +15,9 @@ import {HeaderComponent} from './components/header/header.component';
     ],
     declarations: [
         AppComponent,
-        HeaderComponent
+        HeaderComponent,
+        BodyComponent,
+        MainContainerComponent
     ],
     providers: [],
     bootstrap: [
