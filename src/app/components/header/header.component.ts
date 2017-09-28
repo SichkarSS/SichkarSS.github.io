@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+    public isMouseOver = false;
+    public isTransitionEnd = false;
 
     constructor() {
     }
@@ -13,4 +15,18 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
     }
 
+    moveTheBall() {
+        this.isMouseOver = true;
+        this.isTransitionEnd = false;
+    }
+
+    returnTheBall() {
+        setTimeout(() => {
+            this.isMouseOver = false;
+        }, 500);
+    }
+
+    onTransitionEnd() {
+        this.isTransitionEnd = true;
+    }
 }
