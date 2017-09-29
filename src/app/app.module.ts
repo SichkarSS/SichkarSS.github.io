@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 
 import {MaterialImportModule} from './modules/material-import/material-import.module';
@@ -11,6 +12,7 @@ import {MainContainerComponent} from './components/main-container/main-container
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         MaterialImportModule
     ],
     declarations: [

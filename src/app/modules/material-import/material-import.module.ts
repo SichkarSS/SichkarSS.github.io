@@ -2,16 +2,18 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 
-import {MdIconModule} from '@angular/material';
+import {MdIconModule, MatTabsModule} from '@angular/material';
 
 @NgModule({
     imports: [
         CommonModule,
         HttpModule,
-        MdIconModule
+        MdIconModule,
+        MatTabsModule
     ],
     exports: [
-        MdIconModule
+        MdIconModule,
+        MatTabsModule
     ],
     declarations: []
 })

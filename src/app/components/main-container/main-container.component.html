@@ -1,8 +1,18 @@
 <div class="app-window">
 
-    <h1>
-        Welcome to:
-    </h1>
-    <img src="../../assets/give-the-ball.jpg">
+    <md-tab-group class="">
+        <ng-container *ngFor="let tab of TABS">
+            <md-tab label="{{tab.id}}">
+                <ng-template md-tab-label>
+                    {{tab.name}}
+                </ng-template>
+                <h1>
+                    Welcome to:
+                </h1>
+                <img src="../../assets/give-the-ball.jpg">
+            </md-tab>
+        </ng-container>
+
+    </md-tab-group>
 </div>
 
