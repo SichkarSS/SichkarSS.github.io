@@ -4,6 +4,7 @@
          (mouseleave)="returnTheBall()">
         <img class="app-logo second"
              [ngClass]="{'down': isMouseOver, 'up': !isMouseOver, 'on-transition-end': isTransitionEnd}"
+             [style.top.px]="isMouseOver ? window.innerHeight - 30 : 0 "
              (transitionend)="onTransitionEnd()"
              src="assets/soccer-ball.svg"
              width="24px"

@@ -31,14 +31,12 @@
 }
 
 .up {
-    top: 0;
     left: 0;
     transform: rotate(360deg);
     transition: left 1s ease-out, transform 1s ease-out;
 }
 
 .down {
-    top: 2000px;
     transform: rotate(180deg);
     transition: all 0.5s ease-in;
 }
