@@ -1,18 +1,22 @@
 <div class="app-header">
-    <div class="logo-container header-item"
-         (mouseover)="moveTheBall()"
-         (mouseleave)="returnTheBall()">
-        <img class="app-logo second"
-             [ngClass]="{'down': isMouseOver, 'up': !isMouseOver, 'on-transition-end': isTransitionEnd}"
-             [style.top.px]="isMouseOver ? window.innerHeight - 30 : 0 "
-             (transitionend)="onTransitionEnd()"
-             src="assets/soccer-ball.svg"
-             width="24px"
-             height="24px"/>
-    </div>
+    <div #headerContainer
+         class="size-like-body">
+        <div class="logo-container header-item"
+             (mouseover)="moveTheBall()"
+             (mouseleave)="returnTheBall()">
+            <img class="app-logo second"
+                 [ngClass]="{'down': ballShouldBeDown, 'up': !ballShouldBeDown, 'is-animation-continue': !isAnimationShouldStart}"
+                 [style.top.px]="ballShouldBeDown ? window.innerHeight - ICON_SIZE : 0"
+                 [style.left.px]="ballShouldBeDown && !isAnimationShouldStart ? -leftOutOfScreen : 0"
+                 (transitionend)="onTransitionEnd()"
+                 src="assets/soccer-ball.svg"
+                 width="24px"
+                 height="24px"/>
+        </div>
 
-    <div class="user-header-info header-item">
-        <i class="material-icons">rowing</i>
-        <span>MegaUser Number 1</span>
+        <div class="user-header-info header-item">
+            <i class="material-icons">rowing</i>
+            <span>MegaUser Number 1</span>
+        </div>
     </div>
 </div>

@@ -1,7 +1,8 @@
 @import '~@angular/material/theming';
 @import 'src/styles.scss';
+@import '../main-container/main-container.component';
 
-.user-header-info, .app-header {
+.user-header-info, .app-header, .size-like-body {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,6 +10,12 @@
 
 .user-header-info {
     color: white;
+}
+
+.size-like-body {
+    justify-content: space-between;
+    width: $default-width + 2 * $body-padding;
+    min-width: $default-min-width;
 }
 
 .app-header {
@@ -19,15 +26,21 @@
     width: 100%;
     height: 40px;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
-    justify-content: space-between;
+    justify-content: center;
+    z-index: 10;
 }
 
 .header-item {
-    margin: 0 40px;
+    margin: 0 5px;
 }
 
 .app-logo {
     position: relative;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .up {
@@ -41,14 +54,9 @@
     transition: all 0.5s ease-in;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-}
 
-.down.on-transition-end {
+.down.is-animation-continue {
     transform: rotate(-360deg);
-    left: -200px;
     transition-duration: 0s;
 }
 
