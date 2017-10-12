@@ -10,5 +10,5 @@ $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
 
 html {
-    background-color: #F2F2F2;
+    background-image: url(/assets/seamless-grass-texture-bw.jpg);
 }

@@ -1,17 +1,21 @@
 <div class="app-header">
     <div #headerContainer
          class="size-like-body">
-        <div class="logo-container header-item"
-             (mouseover)="moveTheBall()"
-             (mouseleave)="returnTheBall()">
-            <img class="app-logo second"
-                 [ngClass]="{'down': ballShouldBeDown, 'up': !ballShouldBeDown, 'is-animation-continue': !isAnimationShouldStart}"
-                 [style.top.px]="ballShouldBeDown ? window.innerHeight - ICON_SIZE : 0"
-                 [style.left.px]="ballShouldBeDown && !isAnimationShouldStart ? -leftOutOfScreen : 0"
-                 (transitionend)="onTransitionEnd()"
-                 src="assets/soccer-ball.svg"
-                 width="24px"
-                 height="24px"/>
+        <div class="left-header-part">
+            <div class="logo-container header-item"
+                 (mouseover)="moveTheBall()"
+                 (mouseleave)="returnTheBall()">
+                <img class="app-logo second"
+                     [ngClass]="{'down': ballShouldBeDown, 'up': !ballShouldBeDown, 'is-animation-continue': !isAnimationShouldStart}"
+                     [style.top.px]="ballShouldBeDown ? window.innerHeight - ICON_SIZE : 0"
+                     [style.left.px]="ballShouldBeDown && !isAnimationShouldStart ? -leftOutOfScreen : 0"
+                     (transitionend)="onTransitionEnd()"
+                     src="assets/soccer-ball.svg"
+                     width="24px"
+                     height="24px"/>
+            </div>
+
+            <div class="divider"></div>
         </div>
 
         <div class="user-header-info header-item">
