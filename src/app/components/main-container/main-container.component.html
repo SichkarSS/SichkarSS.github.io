@@ -1,18 +1,16 @@
 <div class="app-window">
 
-    <md-tab-group class="">
-        <ng-container *ngFor="let tab of TABS">
-            <md-tab label="{{tab.id}}">
-                <ng-template md-tab-label>
-                    {{tab.name}}
-                </ng-template>
-                <h1>
-                    Welcome to:
-                </h1>
-                <img src="../../assets/give-the-ball.jpg">
-            </md-tab>
-        </ng-container>
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link
+           *ngFor="let tab of TABS"
+           [routerLink]="tab.path"
+           routerLinkActive
+           #rla="routerLinkActive"
+           [active]="rla.isActive">
+            {{tab.label}}
+        </a>
+    </nav>
 
-    </md-tab-group>
+    <router-outlet></router-outlet>
 </div>
 

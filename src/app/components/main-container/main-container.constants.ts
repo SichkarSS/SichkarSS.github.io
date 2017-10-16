@@ -1,22 +1,27 @@
 export const TABS = [
     {
         id: 1,
-        name: 'События',
+        label: 'События',
+        path: 'events'
     },
     {
         id: 2,
-        name: 'Мои Игры',
+        label: 'Мои Игры',
+        path: 'my-events'
     },
     {
         id: 3,
-        name: 'Сообщения',
+        label: 'Сообщения',
+        path: 'messages'
     },
     {
         id: 4,
-        name: 'Друзья',
+        label: 'Друзья',
+        path: 'friends'
     },
     {
         id: 5,
-        name: 'Магазин',
+        label: 'Магазин',
+        path: 'shop'
     }
 ];
