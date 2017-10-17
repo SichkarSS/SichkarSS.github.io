@@ -9,7 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "release": "ng build --prod --base-href \"http://giveball.ru/\" && ngh && git fetch && git checkout master && git merge origin/gh-pages && git push"
+        "release": "ng build --prod --base-href \"http://giveball.ru/\" && ngh && git fetch && git checkout master && git merge origin/gh-pages && git push && git checkout developer"
     },
     "private": true,
     "dependencies": {
