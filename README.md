@@ -1,10 +1,19 @@
 # GiveTheBallClient
 
+##To make release
+run this commands in terminal window: 
+`ng build --prod --base-href "http://giveball.ru/"
+ngh
+git fetch
+git checkout master
+git merge origin/gh-pages
+git push`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4300/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
