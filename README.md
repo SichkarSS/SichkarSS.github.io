@@ -2,7 +2,8 @@
 
 ## To make release
 run this commands in terminal window: 
-```ng build --prod --base-href "http://giveball.ru/"
+```
+ng build --prod --base-href "http://giveball.ru/"
 ngh
 git fetch
 git checkout master
