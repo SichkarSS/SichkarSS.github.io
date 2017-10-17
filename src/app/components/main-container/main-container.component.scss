@@ -1,8 +1,7 @@
-$default-min-width: 600px;
-$default-width: 1000px;
-$body-padding: 25px;
+@import "../../styles/styles.shared";
 
 .app-window {
+    height: calc(100vh - #{$body-padding} * 2 - #{$body-container-top-margin} - #{$global-body-margin} * 2);
     margin: auto;
     padding: $body-padding;
     max-width: $default-width;

@@ -1,6 +1,8 @@
+@import "../../styles/styles.shared";
+
 .body-container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: $body-container-top-margin;
 }
 
 
