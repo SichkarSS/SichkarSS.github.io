@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {HttpService} from '../../../../services/http.service';
 
 @Component({
     selector: 'app-event-list',
@@ -9,6 +10,7 @@ import {FormControl} from '@angular/forms';
 export class EventListComponent implements OnInit {
 
     stateCtrl: FormControl;
+    hello: any;
     states: any[] = [
         {
             name: 'Arkansas',
@@ -36,11 +38,14 @@ export class EventListComponent implements OnInit {
         }
     ];
 
-    constructor() {
+    constructor(private httpService: HttpService) {
         this.stateCtrl = new FormControl();
     }
 
     ngOnInit() {
+        this.httpService.getInfo().subscribe(response => {
+            this.hello = response;
+        });
     }
 
 }
