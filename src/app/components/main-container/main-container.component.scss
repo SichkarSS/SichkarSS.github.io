@@ -2,6 +2,7 @@
 
 .app-window {
     height: calc(100vh - #{$body-padding} * 2 - #{$body-container-top-margin} - #{$global-body-margin} * 2);
+    overflow-y: auto;
     margin: auto;
     padding: $body-padding;
     max-width: $default-width;

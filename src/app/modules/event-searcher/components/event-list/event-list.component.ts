@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {HttpService} from '../../../../services/http.service';
+import {events} from './event-list.constants';
 
 @Component({
     selector: 'app-event-list',
@@ -11,6 +12,7 @@ export class EventListComponent implements OnInit {
 
     stateCtrl: FormControl;
     hello: any;
+    events = events;
     states: any[] = [
         {
             name: 'Arkansas',

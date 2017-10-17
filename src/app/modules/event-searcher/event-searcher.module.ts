@@ -9,6 +9,7 @@ import {HttpService} from '../../services/http.service';
 
 import {EventListComponent} from './components/event-list/event-list.component';
 import {MyEventsComponent} from './components/my-events/my-events.component';
+import { EventItemComponent } from './components/event-item/event-item.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import {MyEventsComponent} from './components/my-events/my-events.component';
     ],
     declarations: [
         EventListComponent,
-        MyEventsComponent
+        MyEventsComponent,
+        EventItemComponent
     ],
     providers: [
         HttpService

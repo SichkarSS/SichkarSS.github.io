@@ -1,3 +1,9 @@
+.events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -8,4 +14,13 @@
 
 .example-full-width {
     width: 100%;
+}
+
+app-event-item {
+    margin-bottom: 20px;
+}
+
+.tmp-info {
+    //position: relative;
+    //bottom: 0;
 }
