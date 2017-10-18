@@ -6,6 +6,7 @@ import {Http, Response, Headers, RequestOptions} from '@angular/http';
 export class HttpService {
 
     SERVER_URL = 'https://lit-harbor-28997.herokuapp.com/';
+    SERVER_URL_HOME = 'http://localhost:5000/';
 
     constructor(private http: Http) {
     }

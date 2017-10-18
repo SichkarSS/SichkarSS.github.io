@@ -1,14 +1,9 @@
 # GiveTheBallClient
 
 ## To make release
-run this commands in terminal window: 
+run this command in terminal window: 
 ```
-ng build --prod --base-href "http://giveball.ru/"
-ngh
-git fetch
-git checkout master
-git merge origin/gh-pages
-git push
+npm run release
 ```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
