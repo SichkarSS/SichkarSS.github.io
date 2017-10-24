@@ -13,10 +13,7 @@
     </form>
 
     <ng-container *ngFor="let item of events">
-        <app-event-item [title]="item.title"
-                        [address]="item.address"
-                        [description]="item.description">
-
+        <app-event-item [eventItem]="item">
         </app-event-item>
 
     </ng-container>

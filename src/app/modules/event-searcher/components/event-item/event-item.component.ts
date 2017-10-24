@@ -1,20 +1,21 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
+import {EventItem} from './entities/EventItem';
 
 @Component({
     selector: 'app-event-item',
     templateUrl: './event-item.component.html',
-    styleUrls: ['./event-item.component.scss']
+    styleUrls: ['./event-item.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class EventItemComponent implements OnInit {
 
-    @Input() title: string;
-    @Input() address: string;
-    @Input() description: string;
+    @Input() eventItem: EventItem;
 
     constructor() {
     }
 
     ngOnInit() {
+        this.eventItem.date = new Date(this.eventItem.date);
     }
 
 }

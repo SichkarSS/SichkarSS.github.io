@@ -1,14 +1,25 @@
 <md-card class="event-item">
-    <md-card-header>
-        <div md-card-avatar class="example-header-image"></div>
-        <md-card-title>{{title}}</md-card-title>
-        <md-card-subtitle>{{address}}</md-card-subtitle>
-    </md-card-header>
-    <img width="100px" height="100px" md-card-image src="assets/soccer-ball.svg" alt="Photo of a Shiba Inu">
-    <md-card-content>
-        {{description}}
-    </md-card-content>
-    <md-card-actions>
-        <button md-raised-button>Пойти</button>
-    </md-card-actions>
+    <div class="short-info">
+        <img class="event-item-avatar" width="100px" height="100px" md-card-image src="assets/default_avatar.JPG">
+    </div>
+    <div class="detailed-info">
+        <div class="flex event-item-header-container">
+            <md-card-header class="flex event-item-header">
+                <md-card-title>{{eventItem.title}}</md-card-title>
+                <md-card-subtitle>{{eventItem.date}}</md-card-subtitle>
+                <md-card-subtitle>{{eventItem.address}}</md-card-subtitle>
+                <md-card-subtitle>{{eventItem.bookedPeopleNumber}}/{{eventItem.allPeopleNumber}}</md-card-subtitle>
+            </md-card-header>
+            <img md-card-avatar class="example-header-image" src="assets/soccer-ball.svg">
+        </div>
+
+        <md-card-content class="event-item-description">
+            {{eventItem.description}}
+        </md-card-content>
+        <md-card-actions class="event-item-footer">
+            <button md-raised-button>Пойти</button>
+        </md-card-actions>
+    </div>
+
+
 </md-card>
