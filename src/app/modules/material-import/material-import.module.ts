@@ -10,7 +10,9 @@ import {
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NoConflictStyleCompatibilityMode,
+    MatGridListModule
 } from '@angular/material';
 
 @NgModule({
@@ -24,7 +26,9 @@ import {
         MatInputModule,
         MatCardModule,
         MatButtonModule,
-        MatExpansionModule
+        MatExpansionModule,
+        NoConflictStyleCompatibilityMode,
+        MatGridListModule
     ],
     exports: [
         MdIconModule,
@@ -34,7 +38,9 @@ import {
         MatInputModule,
         MatCardModule,
         MatButtonModule,
-        MatExpansionModule
+        MatExpansionModule,
+        NoConflictStyleCompatibilityMode,
+        MatGridListModule
     ],
     declarations: []
 })

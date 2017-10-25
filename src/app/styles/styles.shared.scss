@@ -7,5 +7,15 @@ $global-body-margin: 8px;
 $default-container-border-radius: 3px;
 
 .flex {
-    display: flex;
+    display: flex !important;
+}
+
+.flex-column {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex !important;
+    flex-direction: row;
 }

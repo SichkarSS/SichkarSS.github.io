@@ -1,0 +1,17 @@
+mat-expansion-panel.event-item-details-card {
+    box-shadow: 1px 1px 1px -9px rgba(0, 0, 0, 0.2), -1px 1px 1px 0 rgba(0, 0, 0, 0.14), 0 0.5px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.event-item-details-header-description {
+    text-align: start;
+    max-height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    float:left;
+}
+
+.event-item-details-description {
+    text-align: start;
+}

@@ -10,6 +10,7 @@ import {HttpService} from '../../services/http.service';
 import {EventListComponent} from './components/event-list/event-list.component';
 import {MyEventsComponent} from './components/my-events/my-events.component';
 import { EventItemComponent } from './components/event-item/event-item.component';
+import { EventItemDetailsComponent } from './components/event-item-details/event-item-details.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { EventItemComponent } from './components/event-item/event-item.component
     declarations: [
         EventListComponent,
         MyEventsComponent,
-        EventItemComponent
+        EventItemComponent,
+        EventItemDetailsComponent
     ],
     providers: [
         HttpService

@@ -1,15 +1,15 @@
-@import "../../../../styles/styles.shared";
-
 $default-avatar-size: 100px;
 
-md-card.event-item {
+mat-card.event-item {
     display: flex;
     flex-direction: row;
 }
-
+.short-info {
+    width: 20%;
+}
 .detailed-info {
-    width: 100%;
-    display: grid;
+    width: 80%;
+    display: block;
 }
 
 img.event-item-avatar {
@@ -25,22 +25,21 @@ img.event-item-avatar {
     }
 }
 
-md-card-actions.event-item-footer {
+.event-item-details {
+    max-width: 700px;
+    min-width: 300px;
+}
+
+button.agree-button {
+    border-radius: 0 4px 4px 0;
+}
+
+mat-card-actions.event-item-footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-}
-
-.event-item-description {
-    text-align: start;
-    max-height: 70px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    white-space: nowrap;
-    float:left;
 }
 
 .event-item-header-container {

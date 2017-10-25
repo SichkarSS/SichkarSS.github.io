@@ -1,25 +1,31 @@
-<md-card class="event-item">
+<mat-card class="event-item">
     <div class="short-info">
-        <img class="event-item-avatar" width="100px" height="100px" md-card-image src="assets/default_avatar.JPG">
+        <img class="event-item-avatar" width="100px" height="100px" mat-card-image src="assets/default_avatar.JPG">
     </div>
+
     <div class="detailed-info">
         <div class="flex event-item-header-container">
-            <md-card-header class="flex event-item-header">
-                <md-card-title>{{eventItem.title}}</md-card-title>
-                <md-card-subtitle>{{eventItem.date}}</md-card-subtitle>
-                <md-card-subtitle>{{eventItem.address}}</md-card-subtitle>
-                <md-card-subtitle>{{eventItem.bookedPeopleNumber}}/{{eventItem.allPeopleNumber}}</md-card-subtitle>
-            </md-card-header>
-            <img md-card-avatar class="example-header-image" src="assets/soccer-ball.svg">
+            <mat-card-header class="flex event-item-header">
+                <mat-card-title>{{eventItem.title}}</mat-card-title>
+                <mat-card-subtitle>{{eventItem.date}}</mat-card-subtitle>
+                <mat-card-subtitle>{{eventItem.address}}</mat-card-subtitle>
+                <mat-card-subtitle>{{eventItem.bookedPeopleNumber}}/{{eventItem.allPeopleNumber}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-avatar class="example-header-image" src="assets/soccer-ball.svg">
         </div>
 
-        <md-card-content class="event-item-description">
-            {{eventItem.description}}
-        </md-card-content>
-        <md-card-actions class="event-item-footer">
-            <button md-raised-button>Пойти</button>
-        </md-card-actions>
+        <div class="flex-row">
+            <app-event-item-details class="event-item-details"
+                                    [eventItem]="eventItem">
+            </app-event-item-details>
+            <mat-card-actions class="event-item-footer">
+                <button type="button"
+                        class="agree-button"
+                        color="primary"
+                        mat-raised-button>
+                    Пойти
+                </button>
+            </mat-card-actions>
+        </div>
     </div>
-
-
-</md-card>
+</mat-card>
