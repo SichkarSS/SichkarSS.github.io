@@ -1,16 +1,22 @@
 <div class="app-window">
 
-    <nav mat-tab-nav-bar>
-        <a mat-tab-link
-           *ngFor="let tab of TABS"
-           [routerLink]="tab.path"
-           routerLinkActive
-           #rla="routerLinkActive"
-           [active]="rla.isActive">
-            {{tab.label}}
-        </a>
-    </nav>
+    <div class="content-header">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link
+               *ngFor="let tab of TABS"
+               [routerLink]="tab.path"
+               routerLinkActive
+               #rla="routerLinkActive"
+               [active]="rla.isActive">
+                {{tab.label}}
+            </a>
+        </nav>
+    </div>
 
-    <router-outlet></router-outlet>
+
+    <div class="content-container">
+        <router-outlet></router-outlet>
+    </div>
+
 </div>
 
