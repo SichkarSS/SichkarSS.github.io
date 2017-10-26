@@ -21,6 +21,7 @@
             <mat-card-actions class="event-item-footer">
                 <button type="button"
                         class="agree-button"
+                        [routerLink]="['/events/', eventItem.id]"
                         color="primary"
                         mat-raised-button>
                     Открыть

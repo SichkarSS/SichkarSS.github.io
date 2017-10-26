@@ -1,7 +1,7 @@
 @import "../../styles/styles.shared";
 
 .app-window {
-    height: calc(100vh - #{$body-padding} - #{$body-container-top-margin} - #{$global-body-margin} * 2);
+    height: calc(100vh - #{$body-padding} - #{$body-container-top-margin} - #{$global-body-margin});
     overflow-y: auto;
     margin: auto;
     border-radius: $default-container-border-radius;

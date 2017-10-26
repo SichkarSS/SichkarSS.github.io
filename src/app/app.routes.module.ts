@@ -15,11 +15,12 @@ const routes: Routes = [
     {path: 'messages', component: MessagesComponent},
     {path: 'my-events', component: MyEventsComponent},
     {path: 'shop', component: ShopComponent},
-    {path: '**', redirectTo: '/events', pathMatch: 'full'}
+    {path: '', redirectTo: 'events', pathMatch: 'full'},
+    // {path: '**', redirectTo: '/events'}
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes/*, { enableTracing: true }*/)],
     exports: [RouterModule],
 })
 export class AppRoutingModule {
