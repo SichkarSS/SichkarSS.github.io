@@ -32,7 +32,7 @@
 }
 
 div.content-header {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     background-color: white;
     width: $default-width + $body-padding / 2;
