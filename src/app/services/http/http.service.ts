@@ -15,4 +15,8 @@ export class HttpService {
         return this.http.get(this.SERVER_URL.concat('db'));
     }
 
+    getAllEvents(): Observable<any> {
+        return this.http.get(this.SERVER_URL.concat('events'));
+    }
+
 }

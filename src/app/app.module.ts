@@ -13,6 +13,7 @@ import {MainContainerComponent} from './components/main-container/main-container
 import {MessagesComponent} from './components/messages/messages.component';
 import {FriendsComponent} from './components/friends/friends.component';
 import {ShopComponent} from './components/shop/shop.component';
+import {EventUnsubscriberComponent} from './components/event-unsubscriber/event-unsubscriber.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import {ShopComponent} from './components/shop/shop.component';
         MainContainerComponent,
         MessagesComponent,
         FriendsComponent,
-        ShopComponent
+        ShopComponent,
+        EventUnsubscriberComponent
     ],
     providers: [],
     bootstrap: [

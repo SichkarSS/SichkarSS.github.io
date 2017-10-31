@@ -1,18 +1,21 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {HttpService} from '../../../../services/http.service';
+import {HttpService} from 'app/services/http/http.service';
 import {events} from './event-list.constants';
+import {EventItem} from '../../entities/EventItem';
+
+import {EventUnsubscriberComponent} from 'app/components/event-unsubscriber/event-unsubscriber.component';
 
 @Component({
     selector: 'app-event-list',
     templateUrl: './event-list.component.html',
     styleUrls: ['./event-list.component.scss']
 })
-export class EventListComponent implements OnInit {
+export class EventListComponent extends EventUnsubscriberComponent implements OnInit {
 
     stateCtrl: FormControl;
     hello: any;
-    events = events;
+    events: Array<EventItem>;
     states: any[] = [
         {
             name: 'Arkansas',
@@ -41,13 +44,23 @@ export class EventListComponent implements OnInit {
     ];
 
     constructor(private httpService: HttpService) {
+        super();
         this.stateCtrl = new FormControl();
     }
 
     ngOnInit() {
-        this.httpService.getInfo().subscribe(response => {
-            this.hello = response;
-        });
+        this.httpService.getInfo()
+            .takeUntil(this.ngUnsubscribe)
+            .subscribe(response => {
+                this.hello = response;
+            });
+
+        this.httpService.getAllEvents()
+            .takeUntil(this.ngUnsubscribe)
+            .map(res => <EventItem[]>res.json())
+            .subscribe(data => {
+                this.events = data;
+            });
     }
 
 }
