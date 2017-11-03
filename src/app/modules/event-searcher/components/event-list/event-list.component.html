@@ -12,11 +12,23 @@
         </mat-form-field>
     </form>
 
-    <ng-container *ngFor="let item of events">
-        <app-event-item [eventItem]="item">
-        </app-event-item>
+    <div class="flex-column spinner"
+         *ngIf="!isLoadingComplete">
+        <mat-progress-spinner
+            class="example-margin"
+            color="primary"
+            mode="indeterminate">
+        </mat-progress-spinner>
+    </div>
 
-    </ng-container>
+    <div *ngIf="isLoadingComplete">
+        <ng-container *ngFor="let item of events">
+            <app-event-item [eventItem]="item">
+            </app-event-item>
+
+        </ng-container>
+    </div>
+
 
     <div class="tmp-info">
         {{hello}}

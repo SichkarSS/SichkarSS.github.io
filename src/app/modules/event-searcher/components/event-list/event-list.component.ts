@@ -9,13 +9,14 @@ import {EventUnsubscriberComponent} from 'app/components/event-unsubscriber/even
 @Component({
     selector: 'app-event-list',
     templateUrl: './event-list.component.html',
-    styleUrls: ['./event-list.component.scss']
+    styleUrls: ['./event-list.component.scss', '../../../../styles/styles.shared.scss']
 })
 export class EventListComponent extends EventUnsubscriberComponent implements OnInit {
 
     stateCtrl: FormControl;
     hello: any;
     events: Array<EventItem>;
+    isLoadingComplete = false;
     states: any[] = [
         {
             name: 'Arkansas',
@@ -60,6 +61,7 @@ export class EventListComponent extends EventUnsubscriberComponent implements On
             .map(res => <EventItem[]>res.json())
             .subscribe(data => {
                 this.events = data;
+                this.isLoadingComplete = true;
             });
     }
 

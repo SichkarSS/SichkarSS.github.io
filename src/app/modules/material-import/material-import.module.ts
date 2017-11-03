@@ -12,7 +12,8 @@ import {
     MatButtonModule,
     MatExpansionModule,
     NoConflictStyleCompatibilityMode,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,7 +29,8 @@ import {
         MatButtonModule,
         MatExpansionModule,
         NoConflictStyleCompatibilityMode,
-        MatGridListModule
+        MatGridListModule,
+        MatProgressSpinnerModule
     ],
     exports: [
         MdIconModule,
@@ -40,7 +42,8 @@ import {
         MatButtonModule,
         MatExpansionModule,
         NoConflictStyleCompatibilityMode,
-        MatGridListModule
+        MatGridListModule,
+        MatProgressSpinnerModule
     ],
     declarations: []
 })
